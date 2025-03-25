@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Zone</title>
+    <style>
+        /* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f6a5c0, #f2b8b5);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #FF6F61;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.game-box {
+    background-color: #FFDDC1;
+    color: #6A4C6C;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-box:hover {
+    background-color: #FF9A8B;
+    transform: translateY(-5px);
+}
+
+.game-box:active {
+    transform: translateY(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .game-box {
+        font-size: 1.2rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to Game Zone 🎮</h1>
+    <p>Click a game to play!</p>
+    <div class="game-container">
+        <div class="game-box" onclick="goToPage('Tic.html')">Tic-Tac-Toe</div>
+        <div class="game-box" onclick="goToPage('Rock.html')">Rock-Paper-Scissors</div>
+        <div class="game-box" onclick="goToPage('Mine.html')">Memory Game</div>
+        <div class="game-box" onclick="goToPage('snake.html')">Snake Game</div>
+    </div>
+    <script>
+        function goToPage(url) {
+    window.open(url, '_blank');
+}
+
+    </script>
+</body>
+</html>
